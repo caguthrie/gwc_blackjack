@@ -4,7 +4,7 @@ This is an exercise on APIs and a learning tool for the 2018 Girls Who Code clas
 
 Installation:
 
-`pip install requests`
+`pip install -r requirements.txt`
 
 Run it:
 
