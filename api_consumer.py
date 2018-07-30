@@ -22,4 +22,4 @@ def draw_cards(deck_id, number_of_cards):
     if response.status_code == 200 and draw_details["success"] == True:
         return draw_details["cards"]
     else:
-        raise Exception("Can't draw any cards (greasy fingers maybe)!")
+        raise Exception("Error drawing cards (greasy fingers maybe)!")

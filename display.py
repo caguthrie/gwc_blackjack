@@ -1,32 +1,36 @@
+# coding=utf-8
+suits = {
+    "CLUBS": "♣",
+    "DIAMONDS": "♦",
+    "HEARTS": "♥",
+    "SPADES": "♠"
+}
+
 def print_table(cards, show_all_dealer_cards):
     if show_all_dealer_cards:
-        dealers_cards = ""
-
         card_names = list(map(lambda card: get_card_name(card), cards["dealer"]))
 
-        print("Dealer has: {dealers_cards} (Total: {total})\n\n".format(
-            dealers_cards=" & ".join(card_names),
+        print("Dealer has:\n{dealers_cards} \n(Total: {total})\n".format(
+            dealers_cards="\n".join(card_names),
             total=get_total(cards["dealer"])
         ))
     else:
-        print("Dealer is showing a {card}\n\n".format(
+        print("\nDealer is showing:\n{card}\n\n".format(
             card=get_card_name(cards["dealer"][0])
         ))
     
-    players_cards = ""
-    
     card_names = list(map(lambda card: get_card_name(card), cards["player"]))
     
-    print("You have: {players_cards} (Total: {total})\n\n".format(
-        players_cards=" & ".join(card_names),
+    print("You have:\n{players_cards}\n(Total: {total})\n".format(
+        players_cards="\n".join(card_names),
         total=get_total(cards["player"])
     ))
     
 
 def get_card_name(card):
-    return "{value} of {suit}".format(
+    return "{value} {suit}".format(
         value=card["value"],
-        suit=card["suit"]
+        suit=suits[card["suit"]]
     )
 
 def get_total(cards):
