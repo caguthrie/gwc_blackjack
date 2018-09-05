@@ -16,7 +16,7 @@ def shuffle():
 
 
 
-# This function should call the Deck of Cards API
+# This function should call the Deck of Cards API and return the cards drawn
 def draw_cards(deck_id, number_of_cards):    
     url = "https://deckofcardsapi.com/api/deck/" + deck_id + "/draw/?count=" + str(number_of_cards)
     cards = requests.get(url)

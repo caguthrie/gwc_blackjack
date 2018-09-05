@@ -4,6 +4,8 @@ This is an exercise on APIs and a learning tool for the 2018 Girls Who Code clas
 
 Installation:
 
+Requires Python 3.x
+
 `pip install -r requirements.txt`
 
 Run it:
