@@ -5,8 +5,8 @@ API_BASE_URL = "http://deckofcardsapi.com/api"
 # This function should shuffle a deck and return a deck_id from the Deck of Cards API
 def shuffle():
 
-    newDeck = requests.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
-    
+    newDeck = requests.get("http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
+
     # if this was a successful request:
     if newDeck.status_code == 200:
         return newDeck.json().get("deck_id")
@@ -17,8 +17,8 @@ def shuffle():
 
 
 # This function should call the Deck of Cards API and return the cards drawn
-def draw_cards(deck_id, number_of_cards):    
-    url = "https://deckofcardsapi.com/api/deck/" + deck_id + "/draw/?count=" + str(number_of_cards)
+def draw_cards(deck_id, number_of_cards):
+    url = "http://deckofcardsapi.com/api/deck/" + deck_id + "/draw/?count=" + str(number_of_cards)
     cards = requests.get(url)
 
     # if this was a successful request:
