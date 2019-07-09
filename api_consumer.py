@@ -16,13 +16,28 @@ def shuffle():
 
 
 
+# Question: Please draw "number_of_cards" cards from deck "deck_id" and return the value of "cards"
+#
+# Example response from deckofcardsapi.com when drawing a card
+#
+# {
+#     "cards": [
+#         {
+#             "code": "QH",
+#             "image": "https://deckofcardsapi.com/static/img/QH.png",
+#             "images": {
+#                 "png": "https://deckofcardsapi.com/static/img/QH.png",
+#                 "svg": "https://deckofcardsapi.com/static/img/QH.svg"
+#             },
+#             "suit": "HEARTS",
+#             "value": "QUEEN"
+#         }
+#     ],
+#     "deck_id": "vg290ja1bftp",
+#     "remaining": 50,
+#     "success": true
+# }
+
 # This function should call the Deck of Cards API and return the cards drawn
 def draw_cards(deck_id, number_of_cards):
-    url = API_BASE_URL + "/deck/" + deck_id + "/draw/?count=" + str(number_of_cards)
-    cards = requests.get(url)
-
-    # if this was a successful request:
-    if cards.status_code == 200:
-        return cards.json().get("cards")
-    else:
-        raise Exception("Error drawing cards (greasy fingers maybe)!")
+    raise Exception("Please write this function!")
